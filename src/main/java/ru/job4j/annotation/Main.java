@@ -1,0 +1,16 @@
+package ru.job4j.annotation;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+/**
+ * @author dl
+ * @date 03.07.2024 21:18
+ */
+public class Main {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        Man man = context.getBean(Man.class);
+        man.print();
+    }
+}
